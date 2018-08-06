@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>支付界面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<!-- //web-fonts -->
+<link rel="stylesheet" type="text/css" href="css/wxzf.css">
+
+</head>
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index-1.php"><img src="images/logo.png" alt="叮咚"></a>
+                </div>
+                <div class="menu">
+                    <a href="#" class="navicon"></a>
+                    <div class="toggle">
+                        <ul class="toggle-menu">
+                            <li><a href="index-1.php" > 主页</a></li>
+                            <li><a href="about-1.html"> 关于我们</a></li>
+                            <li><a href="contact-1.html"> 咨询我们</a></li>
+                            <li><a href="center-1.php"> 个人中心</a></li>
+                            <li><a href="index.php"> 注销</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- banner-text -->
+        <div class="banner-text w3labout-bnr">
+            <div class="container">
+                <h2><a href="index-1.php">主页</a> / <a href="shopping.php">购物车</a>  / 支付界面</h2>
+            </div>
+        </div>
+        <!-- //banner-text -->
+    </div>
+    <!-- //banner -->
+        <!-- contact -->
+    <div class="contact" style="padding: 0;">
+            <div class="container">
+                <div class="header">
+                  <div class="all_w" style="position:relative; z-index:1;">
+                    <div class="ttwenz" style=" text-align:center; width:100%;">
+                      <h2 style="padding-top: 10px;">交易详情</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="zfcg_box ">
+                    <div class="all_w">
+                        <img src="images/cg_03.jpg" > 支付成功
+                    </div>
+                </div>
+                <div class="cgzf_info">
+                    <div class="wenx_xx">
+                      <div class="mz">商品名</div>
+                      <div class="wxzf_price">￥11.90</div>
+                    </div>
+
+                    <div class="spxx_shop">
+                        <div class=" mlr_pm">
+
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td>商   品</td>
+                                <td align="right">联通手机缴费</td>
+                              </tr>
+                               <tr>
+                                <td>交易时间</td>
+                                <td align="right" id="time">2018-5-16 22：41：45</td>
+                              </tr>
+                               <tr>
+                                <td>支付方式</td>
+                                <td align="right">招商银行</td>
+                              </tr>
+                               <tr>
+                                <td>交易单号</td>
+                                <td align="right">1205329821521545465665855444</td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- //contact -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix"> </div>
+            <div class="w3agile_footer_copy">
+                <p>Copyright &copy; 2018.叮咚烹饪师 All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- menu-js -->
+    <script>
+        var oTM = document.getElementsByClassName('wxzf_price'),
+        oStf = document.getElementsByClassName('mz'),
+        now = (new Date()).toLocaleString(),
+        oTime = document.getElementById('time');
+        oTM[0].innerText = window.localStorage.getItem('total_money');
+        oStf[0].innerText = window.localStorage.getItem('total_goods');
+        oTime.innerText = now;
+        window.localStorage.setItem('paytime',oTime.innerText);
+    </script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        //出现浮动层
+        $(".ljzf_but").click(function(){
+            $(".ftc_wzsf").show();
+            });
+        //关闭浮动
+        $(".close").click(function(){
+            $(".ftc_wzsf").hide();
+            });
+            //数字显示隐藏
+            $(".xiaq_tb").click(function(){
+            $(".numb_box").slideUp(500);
+            });
+            $(".mm_box").click(function(){
+            $(".numb_box").slideDown(500);
+            });
+            //----
+            var i = 0;
+            $(".nub_ggg li a").click(function(){
+                i++
+                if(i<6){
+                    $(".mm_box li").eq(i-1).addClass("mmdd");
+                    }else{
+                        $(".mm_box li").eq(i-1).addClass("mmdd");
+                        setTimeout(function(){
+                        location.href="cg.html";
+                        },500);
+                        //window.document.location="cg.html"
+                 }
+            });
+
+            $(".nub_ggg li .del").click(function(){
+
+                if(i>0){
+                    i--
+                    $(".mm_box li").eq(i).removeClass("mmdd");
+                    i==0;
+                    }
+                //alert(i);
+            });
+    });
+    </script>
+
+    <script>
+        $('.navicon').on('click', function (e) {
+          e.preventDefault();
+          $(this).toggleClass('navicon--active');
+          $('.toggle').toggleClass('toggle--active');
+        });
+
+        window.onload = function(){
+
+            var oFoot = document.getElementsByClassName('footer')[0];
+            if(document.body.scrollHeight <= window.innerHeight){
+                oFoot.style = "position:absolute;bottom:0;";
+            }else{
+                oFoot.style = "";
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if( xhr.readyState == 4 && xhr.status == 200 ){
+                    console.log(xhr.responseText)
+                    //window.location.reload();
+                }
+            }
+            xhr.open('post','./changeState.php',true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+            var data = "user=<?php echo @$_SESSION['user'] ?>";
+            xhr.send(data);
+
+        }
+        //存储订单信息
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if( xhr.readyState == 4 && xhr.status == 200 ){
+                    console.log(xhr.responseText);
+                    var x = confirm('现在返回继续定制吗？');
+                    if(x){
+                        window.location.href = 'gallery-1.php';
+                    }else{
+                        console.log(1);
+                    }
+                }
+            }
+            xhr.open('post','./paypost.php',true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+            var data = "payname="+window.localStorage.getItem('total_goods')+"&payprice="+window.localStorage.getItem('total_money')+"&paytime="+window.localStorage.getItem('paytime')+"";
+            xhr.send(data);
+    </script>
+    <!-- //menu-js -->
+    <!-- jarallax -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+
+        window.onload = function(){
+
+            var oFoot = document.getElementsByClassName('footer')[0];
+            if(document.body.scrollHeight <= window.innerHeight){
+                oFoot.style = "position:absolute;bottom:0;";
+            }else{
+                oFoot.style = "";
+            }
+        }
+    </script>
+    <!-- //jarallax -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

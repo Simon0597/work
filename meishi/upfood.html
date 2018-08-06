@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>烹饪主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="uploadfile/css/style.css" />
+<!-- //web-fonts -->
+<style>
+    input.clr66::input-placeholder, textarea.clr66::input-placeholder {
+ /* WebKit browsers */
+color: #ccc !important;
+}
+input.clr66::-webkit-input-placeholder, textarea.clr66::-webkit-input-placeholder {
+ /* WebKit browsers */
+color: #ccc !important;
+}
+input.clr66:-moz-placeholder, textarea.clr66:-moz-placeholder {
+/* Mozilla Firefox 4 to 18 */
+color: #ccc !important;
+}
+input.clr66::-moz-placeholder, textarea.clr66::-moz-placeholder {
+ /* Mozilla Firefox 19+ */
+color: #ccc !important;
+}
+input.clr66:-ms-input-placeholder, textarea.clr66:-ms-input-placeholder {
+ /* Internet Explorer 10+ */
+color: #ccc !important;}
+</style>
+</head>
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index-1.php"><img src="images/logo.png" alt="叮咚"></a>
+                </div>
+                <div class="menu">
+                    <a href="#" class="navicon"></a>
+                    <div class="toggle">
+                        <ul class="toggle-menu">
+                            <li><a href="index-1.php" > 主页</a></li>
+                            <li><a href="about-1.html"> 关于我们</a></li>
+                            <li><a href="contact-1.html"> 咨询我们</a></li>
+                            <li><a href="center-1.php"> 个人中心</a></li>
+                            <li><a href="index.php"> 注销</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- banner-text -->
+        <div class="banner-text w3labout-bnr">
+            <div class="container">
+                <h2><a href="index-1.php">主页</a> / 我要烹饪</h2>
+            </div>
+        </div>
+        <!-- //banner-text -->
+    </div>
+    <!-- //banner -->
+        <!-- contact -->
+    <div class="contact">
+            <div class="container">
+                <div class="w3ls-title" style="margin: 0 0 2em;">
+                    <h3 class="agileits-title">爱烹饪，也爱分享</h3>
+                </div>
+                <section id="wrap">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group" style="margin-top: 4em;">
+                            <label for="focusedinput" style="font-size:20px;color: #F44336;" class="col-sm-2 control-label">美食名称</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="foodname" class="form-control1 clr66" placeholder="请输入您菜品的名称" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="focusedinput" style="font-size:20px;color: #F44336;"  class="col-sm-2 control-label">美食价格</label>
+                            <div class="col-sm-8">
+                                <input type="number" name="foodprice" class="form-control1 clr66"  placeholder="请输入您菜品的价格" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="focusedinput" style="font-size:20px;color: #F44336;"  class="col-sm-2 control-label">美食简介</label>
+                            <div class="col-sm-8">
+                                <textarea type="text" name="foodcontent" class="form-control1 clr66"  placeholder="可输入菜系，美食种类，口味以便其他人筛选。" autocomplete="off" style="resize: none;"></textarea>
+                            </div>
+                        </div>
+
+                        <section class="area">
+                            <article id="upload" draggable="true">
+                                <span></span>
+                                <div class="file">选择美食图片<div id="form"  runat="server"  enctype="multipart/form-data" ><input type="file"  id="imges1" class="upimages"/></div></div>
+                            </article>
+                            <article id="drag">请将图片拖到此区域</article>
+                        </section>
+                        <section class="info">
+                            <p>已选中<span class="num" id='picLen'>0</span>张图片，共<span class="size" id='picSize'>0</span>MB</p>
+                            <article>
+                                <!--  <div class="file">继续选择<input type="file" id="imges2"  multiple="multiple" class="upimages"/></div> -->
+                               <!-- <div class="upload" id='btn'>开始上传</div> -->
+                            </article>
+                           <!-- <span style="display: inline-block;float: right;color: red;">* 请图片上传成功后再点击确认分享</span> -->
+                        </section>
+                        <section class="list">
+                            <ul id="oUl">
+                            </ul>
+                        </section>
+                        <button type="button" class="btn btn-success" style="width: 100%;height: 50px;"><h4>确认上传</h4></button>
+                    </form>
+
+                        </section>
+            </div>
+        </div>
+    <!-- //contact -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix"> </div>
+            <div class="w3agile_footer_copy">
+                <p>Copyright &copy; 2018.叮咚烹饪师 All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- menu-js -->
+
+    <script>
+        var oBtn = document.getElementsByClassName('btn-success')[0],
+        oUpI = document.getElementById('imges1'),
+        oUFN = document.getElementsByName('foodname')[0],
+        oUFP = document.getElementsByName('foodprice')[0],
+        oUFC = document.getElementsByName('foodcontent')[0];
+        oBtn.onclick = function(){
+            var al = confirm('确认上传？');
+            if( al ){
+                if(oUFC.value == '' || oUFP.value == '' || oUFN.value == '' || oUFC.value == null || oUFP.value == null || oUFN.value == null){
+                    alert("请填写完所有框")
+                    return false;
+                }else{
+                    var aLi = oUl.querySelectorAll('li');
+                    aLi.forEach(function (item,i) {
+                        var xhr1 = new XMLHttpRequest();
+                        xhr1.onload = function () {
+                            console.log( i )
+                            drag.innerHTML = '恭喜你上传成功';
+                            oUl.removeChild(item);
+                            conut();
+
+                        }
+                        xhr1.open('post','./uploadfile/upload.php',true);
+                        var data = new FormData();
+                        data.append('file',arr[i]);
+                        xhr1.send(data);
+                    });
+
+
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.onload = function () {
+                        if( xhr.readyState == 4 && xhr.status == 200 ){
+                            console.log(xhr.responseText);
+                            alert("上传成功");
+                            window.location.href = 'myupfood.php';
+                        }
+                    }
+                    xhr.open('post','./upfood.php',true);
+                    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+                    var data = "upfoodname="+oUFN.value+"&upfoodprice="+oUFP.value+"&upfoodcontent="+oUFC.value+"&image="+window.localStorage.getItem('upfoodImg')+"";
+                    xhr.send(data);
+
+                    //window.location.reload();
+                }
+            }else{
+                    return false;
+                }
+        }
+        function getPath(obj) {
+                    if (obj) {
+                        if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
+                            obj.select(); return document.selection.createRange().text;
+                        }
+                        else if (window.navigator.userAgent.indexOf("Firefox") >= 1) {
+                            if (obj.files) {
+                                return obj.files.item(0).getAsDataURL();
+                            }
+                            return obj.value;
+                        }
+                        return obj.value;
+                    }
+                }
+    </script>
+
+    <script src="uploadfile/js/js.js" type="text/javascript" charset="utf-8"></script>
+<script>
+        $('.navicon').on('click', function (e) {
+          e.preventDefault();
+          $(this).toggleClass('navicon--active');
+          $('.toggle').toggleClass('toggle--active');
+        });
+    </script>
+    <!-- //menu-js -->
+    <!-- jarallax -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+    <!-- //jarallax -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

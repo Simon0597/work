@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>登陆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index-1.html"><img src="images/logo.png" alt="叮咚"></a>
+                </div>
+                <div class="menu">
+                    <a href="#" class="navicon"></a>
+                    <div class="toggle">
+                        <ul class="toggle-menu">
+                            <li><a href="index.php"> 主页</a></li>
+                            <li><a href="about.html"> 关于我们</a></li>
+                            <li><a href="contact.html"> 咨询我们</a></li>
+                            <li><a href="center.html"> 个人中心</a></li>
+                            <li><a href="codes.html" class="active"> 登陆</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- banner-text -->
+        <div class="banner-text w3labout-bnr">
+            <div class="container">
+                <h2><a href="index.php">主页</a> / 登陆</h2>
+            </div>
+        </div>
+        <!-- //banner-text -->
+    </div>
+    <!-- //banner -->
+    <div class="menu-form">
+        <div class="container">
+            <div class="menu-info" style="text-align: center;">
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true" style="font-weight: bold;">用户登录</a></li>
+                        <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours" style="font-weight: bold;">管理员登录</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
+                            <div class="tab-info">
+                                <form class="form-horizontal" action="login.php" method="post">
+                                    <div class="form-group">
+                                        <label for="focusedinput" class="col-sm-2 control-label">用户名</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="logname" class="form-control1" id="focusedinput" placeholder="请输入您的用户名"  autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" name="logpass" class="form-control1" id="inputPassword" placeholder="请输入您的密码"  autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <p class="message">还没有账户? <a href="regist.html" style="color: #368;font-weight: bold;">立刻创建</a><a href="forget.html" style="float: right;color: #368;font-weight: bold;">忘记密码？</a></p>
+                                    <button type="submit" id="log" class="btn btn-success" style="width: 100%;margin-top: 1em;"><h4 style="font-style: normal;color: #fff;">欢迎您</h4></button>
+                                </form>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
+                            <div class="tab-info">
+                                <form class="form-horizontal" action="manager.php" method="post">
+                                   <div class="form-group">
+                                       <label for="focusedinput" class="col-sm-2 control-label">管理员名</label>
+                                       <div class="col-sm-8">
+                                           <input type="text" name="logname1" class="form-control1" id="focusedinput1" placeholder="请输入您的管理员名"  autocomplete="off">
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                                       <div class="col-sm-8">
+                                           <input type="password" name="logpass1" class="form-control1" id="inputPassword1" placeholder="请输入您的密码"  autocomplete="off">
+                                       </div>
+                                   </div>
+                                   <button type="submit" class="btn btn-success" style="width: 100%;margin-top: 1em;"><h4 style="font-style: normal;color: #fff;">欢迎您</h4></button>
+                               </form>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- short codes -->
+    <!-- <div class="codes">
+        <div class="container">
+            <div class="grid_3 grid_4">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="horizontal-form">
+                        <form class="form-horizontal" action="login.php" mothod="post">
+                            <div class="form-group">
+                                <label for="focusedinput" class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="logname" class="form-control1" id="focusedinput" placeholder="请输入您的用户名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                                <div class="col-sm-8">
+                                    <input type="password" name="logpass" class="form-control1" id="inputPassword" placeholder="请输入您的密码">
+                                </div>
+                            </div>
+                            <p class="message" style="padding-left: 17%;">还没有账户? <a href="regist.html" style="color: #368;font-weight: bold;">立刻创建</a></p>
+                            <button type="submit" class="btn btn-success" style="width: 100%;"><h4>欢迎您</h4></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- //short-codes -->
+    <!-- footer -->
+    <div class="footer" style="width:100%;">
+        <div class="container">
+            <div class="w3agile_footer_copy">
+                <p>Copyright &copy; 2018.叮咚烹饪师 All rights reserved.</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+
+    <!-- <script>
+        var btnL = document.getElementById('log'),
+        oName = document.getElementsByName('logname')[0],
+        oPass = document.getElementsByName('logpass')[0];
+        btnL.onclick = function(){
+            if(oName.value == window.localStorage.getItem('name') && oPass.value == window.localStorage.getItem('pass')){
+                alert(""+oName.value+"，登陆成功！");
+                window.location.href = "index-1.html";
+            }else{
+                console.log("用户名或密码错误！")
+            }
+        }
+    </script> -->
+    <!-- menu-js -->
+    <script>
+        $('.navicon').on('click', function (e) {
+          e.preventDefault();
+          $(this).toggleClass('navicon--active');
+          $('.toggle').toggleClass('toggle--active');
+        });
+    </script>
+    <!-- //menu-js -->
+    <!-- jarallax -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+    <!-- //jarallax -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
